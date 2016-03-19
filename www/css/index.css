@@ -1,0 +1,163 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#ffffff;
+    /*background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );*/
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    /*text-transform:uppercase;*/
+    width:100%;
+}
+
+#ad {
+  text-align: center;
+  /*height: 60px;*/
+  /*position: fixed;*/
+}
+
+#pic {
+  text-align: center;
+  position: relative;
+}
+
+#book {
+  position: absolute;
+  left: 0px;
+  width: 105%;
+  height: 100%;
+}
+
+#esa {
+  position: relative;
+  left: -25px;
+  max-width: 70%;
+  padding: 60px;
+  max-height: 50%;  /* Fix This */
+}
+
+#pic_back {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+}
+
+#pic_fwd {
+  position: absolute;
+  top: 80%;
+  right: 12%;
+}
+
+#heart_bar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #292929;
+}
+
+#heart_bar div {
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  border-radius: 10px;
+  line-height: 20px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #ff1adc;
+}
+
+#points {
+  position: relative;
+  text-align: center;
+}
+
+#footer {
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+}
+
+#footer #narrator {
+  height: 100%;
+}
+
+/* move all store stuff to another css*/
+#store {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  font-size: 16px;
+}
+
+#popup {
+  text-align: center;
+  padding: 4px;
+}
+#popup h1 {
+  text-shadow:  2px 2px #B444E2;
+}
+
+#popupPositioned {
+  background-color: #fff;
+  border: 6px solid #000;
+  border-radius: 20px;
+  top: -10px;
+}
+
+#popupPositioned label {
+  font-size: 22px;
+}
+
+#popupChapter {
+  height: 100vh;
+  width: 95vw;
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+#chapter_text {
+  background-color: #fff;
+  border: 6px solid #000;
+  border-radius: 50px;
+}
+
+#chapter_text label {
+  margin: 20px;
+  color: #000;
+  font-size: 22px;
+}
+
+#chapter_footer {
+    height: 0%;
+    width: 100%;
+}
+
+#chapter_footer #elle {
+    float: left;
+    height: 50%;
+    width: auto;
+    min-height: 250px;
+}
+
+#chapter_footer #bubble_bottom {
+    float: left;
+    min-height: 50px;
+    margin-left: -150px;
+    margin-top: -23px;
+}

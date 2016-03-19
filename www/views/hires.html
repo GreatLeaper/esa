@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="m/styles_mobile.css" /> -->
+    <script>
+      if (screen && screen.width < 480) {
+        document.write('<script src="lib/jquery.mobile-1.4.5.min.js"><\/script>');
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div data-role="page" data-theme="c">
+      <div data-role="header">
+        <h1>Hire Helpers for Esa!</h1>
+      </div>
+
+      <div id="store">
+
+        <div data-role="controlgroup">
+
+          <a onclick="populateHirees('Susie');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" ><span class="ui-btn-inner ui-btn-corner-all"> <span>Susie</span></span></a>
+          <a onclick="populateHirees('Ava');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>Ava</span></span></a>
+          <a onclick="populateHirees('Kevin');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span >Kevin</span></span></a>
+          <a onclick="populateHirees('Marlen');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>Marlen</span></span></a>
+          <a onclick="populateHirees('C-Zar');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>C-Zar MyLand</span></span></a>
+
+          <div data-role="popup" id="popup" data-overlay-theme="a" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-position-to="window">
+            <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <h1 id="hire_title"></h1>
+            <hr>
+            <div role="main">
+              <h2 id=hire_description></h3>
+
+              <div class="ui-grid-a">
+                <div class="ui-block-a">
+                  <label><u>Cost</u></label>
+                  <label id="hire_item_cost">x</label>
+                </div>
+                <div class="ui-block-b">
+                  <label><u>Pets per Minute</u></label>
+                  <label id="hire_pets_per_minute">y</label>
+                </div>
+                <div class="ui-block-a">
+                  <label><u>Your Pets</u></label>
+                  <label id="hire_total_pets">z</label>
+                </div>
+                <div class="ui-block-b">
+                  <a id="hire" data-role="button" data-icon="plus" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Hire Them!</span></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         </div>
+
+      </div>
+
+      <div data-role="footer" data-position="fixed" >
+        <a data-rel="back" class="button">Back</a>
+      </div>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESA Story Adventure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="themes/esa-pink.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="lib/jquery-2.1.1.min.js"></script>
+  <script src="js/hammer.min.js"></script>
+  <script src="js/hammer-time.js"></script> <!-- check to see if min fixed https://github.com/hammerjs/hammer-time/issues -->
+  <script src="js/app.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="m/styles_mobile.css" /> -->
+  <script>
+    if (screen && screen.width < 1000) {
+      document.write('<script src="lib/jquery.mobile-1.4.5.min.js"><\/script>');
+    }
+  </script>
+</head>
+
+<body>
+
+<div data-role="page" data-theme="c">
+
+  <div id="ad" data-role="header" data-position="fixed">
+    Add goes here
+  </div>
+
+  <!-- <div>
+    <center><h1>Esa Story Adventure v 0.8</h1></center>
+  </div> -->
+
+  <div id="pic">
+    <img id="book" src="images/book.png">
+    <img id="esa" src="images/elle/elle-main.png">
+    <a id="pic_back" onclick="nextPic(-1);" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext"><</a>
+    <a id="pic_fwd" onclick="nextPic(1);" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-notext">></a>
+  </div>
+
+  <div id="heart_bar">
+    <div></div>
+  </div>
+
+  <div id="points" class="ui-grid-c">
+	  <div class="ui-block-a">
+      <label id="total_hearts_label"><u>Hearts</u></label>
+      <label id="total_pets">0</label>
+    </div>
+	  <div class="ui-block-b">
+      <label><u>Rate</u></label>
+      <label id="pets_per_click">1</label>
+    </div>
+	  <div class="ui-block-c">
+      <label id="chapter_label"><u>Chapter</u></label>
+      <label id="chapter">0</label>
+    </div>
+    <div class="ui-block-d">
+      <label id="next_chapter_label"><u>Next</u></label>
+      <label id="next_chapter">0</label>
+    </div>
+  </div>
+
+  <div id="buttons" class="ui-grid-c">
+	  <div class="ui-block-a">
+      <a id="btn_shop" href="views/store.html" data-role="button" data-transition="flip" data-icon="shop">Store</a>
+    </div>
+    <div class="ui-block-b">
+      <a id="btn_walks" href="views/walks.html" data-role="button" data-transition="flip" data-icon="home">Walks</a>
+    </div>
+    <div class="ui-block-c">
+      <a id="btn_hires" href="views/hires.html" data-role="button" data-transition="flip" data-icon="user">Hire</a>
+    </div>
+    <div class="ui-block-d">
+      <a id="btn_vacas" href="" data-role="button" data-transition="flip" data-icon="home">Vacations</a>
+    </div>
+  </div>
+
+  <div id="footer">
+    <img id="narrator" src="images/elle/elle-main.png">
+  </div>
+
+  <div style="display:none;">
+    <a id="btn_next" href="#popupChapter" data-role="button" data-rel="popup" data-transition="pop">Elle Popop</a>
+    <a id="btn_position" href="#popupPositioned" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="popup" data-position-to="#selector">Position Popup</a>
+  </div>
+
+  <div data-role="popup" id="popupChapter" data-history="false" data-theme="none">
+    <a onclick="closePopup();" href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext " style="float:right;">X</a>
+    <div id="chapter_text">
+      <label>
+       This needs to be a long message to init the text box.  Weird.
+     </label>
+    </div>
+    <div id="chapter_footer">
+      <img id="elle" src="" />
+      <img id="bubble_bottom" src="images/bubble_bottom.png" />
+    </div>
+  </div>
+
+  <div data-role="popup" id="popupPositioned" data-history="false" class="ui-content" data-arrow="b">
+    <a onclick="closePopup();" href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext " style="float:right;">X</a>
+    <label>This is the text for the positioned popup.</label>
+  </div>
+
+</div>
+
+</body>
+</html>
