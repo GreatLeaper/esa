@@ -148,8 +148,6 @@ function closePopup() {
 
 function showPopup(id) {
 
-  $('#narrator').hide();
-
   // Set element to position to
   if ('element' in chapters[id]) {
 
@@ -161,6 +159,8 @@ function showPopup(id) {
 
   } else {
 
+    $('#narrator').hide();
+    
     $('#btn_next').click();
 
     // Remove the ui-overlay-shadow class from popupChapter
