@@ -151,16 +151,28 @@ function showPopup(id) {
   // Set element to position to
   if ('element' in chapters[id]) {
 
-    $('#btn_position').attr('data-position-to', chapters[id].element);
+    // Note: The link needs to be dynamic or the data-position-to doesn't work.
+    
+    // create a dynamic a selector
+    $('<a>', {
+      id: 'btn_positioned_' + id,
+      href: '#popupPositioned',
+      'data-rel': 'popup',
+      'data-position-to': chapters[id].element,
+      text: 'Popup Positioned',
+      class: 'ui-btn ui-corner-all ui-shadow ui-btn-inline',
+    }).appendTo('#popupLinks');
+
     // Set popup message
     $('#popupPositioned label').html(chapters[id].message);
+
     // popup the message
-    $('#btn_position').click();
+    $('#btn_positioned_' + id).click();
 
   } else {
 
     $('#narrator').hide();
-    
+
     $('#btn_next').click();
 
     // Remove the ui-overlay-shadow class from popupChapter
