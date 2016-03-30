@@ -76,7 +76,7 @@ $(window).bind("load", function() {
 
    mc.on("swipeup swipedown swipeleft swiperight", function(ev) {
      if (ev.type == chapters[chapter_id].bad_pet_direction) {
-       alert('No!  Don\'t pet me against my fir!');
+       alert('No!  Don\'t pet me against my fur!');
      } else {
        givePoints(2);
      }
