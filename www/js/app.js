@@ -21,17 +21,28 @@ var chapters = [ {id:0,  chapter:1, points:0,        bonus:0, narrator_pic:'elle
                  {id:7,  chapter:3, points:20,       bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-003.jpg', message:'Now tap and pet her to get 100 hearts, and in Chapter 4, we will go shopping for her!', completed:0, bad_pet_direction:'swipeup'},
                  {id:8,  chapter:4, points:100,      bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-003.jpg', message:'Well done.  Now, let\'s go to the store and buy Esa a collar!', completed:0, bad_pet_direction:'swipeup'},
                  {id:9,  chapter:4, points:100,      bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-003.jpg', message:'Click here to go to the store.', completed:0, bad_pet_direction:'swipeup', element:'#btn_shop'},
-                 {id:10, chapter:4, points:'collar', bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-collar.jpg', message:'Look how cute Esa looks with a collar!', completed:0, bad_pet_direction:'swipeup'},
-                 {id:11, chapter:4, points:'collar', bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-collar.jpg', message:'Every time you buy a new item, you will see a new picture of Esa with that item!', completed:0, bad_pet_direction:'swipeup'},
+                 {id:10, chapter:4, points:'Collar', bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-collar.jpg', message:'Look how cute Esa looks with a collar!', completed:0, bad_pet_direction:'swipeup'},
+                 {id:11, chapter:4, points:'Collar', bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-collar.jpg', message:'Every time you buy a new item, you will see a new picture of Esa with that item!', completed:0, bad_pet_direction:'swipeup'},
                  {id:12, chapter:5, points:200,      bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-004.jpg', message:'Click to 500 to see the next pic....', completed:0, bad_pet_direction:'swipeup'},
-                 {id:13, chapter:6, points:500,      bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-005.jpg', message:'ad some text....', completed:0, bad_pet_direction:'swipeup'} ]
+                 {id:13, chapter:6, points:2000,     bonus:0, narrator_pic:'elle-main.png', esa_pic: 'esa-005.jpg', message:'ad some text....', completed:0, bad_pet_direction:'swipeup'} ]
 
-var products = [ {item:'collar', cost:100, bonus:1, enabled:1, unlocks:[ {product:'leash'}, {product:'nametag'} ], title:'Buy a collar?', description:'Esa would love a collar.  And if she had one, you can then get her a nametag, and more importantly, a leash so she can go on walks!', owned:0, completed:0 },
-                 {item:'comb',   cost:900, bonus:2, enabled:1, title:'Buy a comb?', description:'Esa likes your hand, but she likes a comb more!', owned:0, completed:0 },
-                 {item:'brush',  cost:2000, bonus:5, enabled:1, title:'Buy a brush?', description:'Oh wow, Esa just loves a brush!', owned:0, completed:0 },
-                 {item:'leash',  cost:50, bonus:0, enabled:0, unlocks:[{selector:'#btn_walks'}], title:'', description:'Buying a leash will allow you to talk Esa on walks!', owned:0, completed:0 },
-                 {item:'ball',   cost:0, bonus:0, enabled:1, title:'', description:'', owned:0, completed:0 },
-                 {item:'y',      cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 } ]
+var products = [ {item:'Cheat',         cost:-1, bonus:101, enabled:1, title:'Cheat?', description:'This is for KAW to get point seasily for testing', owned:0, completed:0 },
+                 {item:'Collar',        cost:100, bonus:1, enabled:1, unlocks:[ {product:'Leash'}, {product:'Dog Tag'} ], title:'Buy a collar?', description:'Esa would love a collar.  And if she had one, you can then get her a nametag, and more importantly, a leash so she can go on walks!', owned:0, completed:0 },
+                 {item:'Comb',          cost:900, bonus:2, enabled:1, title:'Buy a comb?', description:'Esa likes your hand, but she likes a comb more!', owned:0, completed:0 },
+                 {item:'Brush',         cost:2000, bonus:5, enabled:1, title:'Buy a brush?', description:'Oh wow, Esa just loves a brush!', owned:0, completed:0 },
+                 {item:'Leash',         cost:50, bonus:0, enabled:0, unlocks:[{selector:'#btn_walks'}], title:'', description:'Buying a leash will allow you to talk Esa on walks!', owned:0, completed:0 },
+                 {item:'Ball',          cost:0, bonus:0, enabled:1, title:'', description:'', owned:0, completed:0 },
+                 {item:'Chew Toy',      cost:0, bonus:0, enabled:1, title:'', description:'', owned:0, completed:0 },
+                 {item:'Painted Nails gjhgjg', cost:0, bonus:0, enabled:1, title:'', description:'', owned:0, completed:0 },
+                 {item:'Bone',          cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Stick',         cost:0, bonus:0, enabled:1, title:'', description:'', owned:0, completed:0 },
+                 {item:'Frisbee',       cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Beef Jerky',    cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Bacon',         cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Banana',        cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Apple',         cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 },
+                 {item:'Bee',           cost:0, bonus:0, enabled:1, title:'', description:'For some reason, Esa loves to eat bees.  Don\'t ask.', owned:0, completed:0 },
+                 {item:'Dog Tag',       cost:0, bonus:0, enabled:0, title:'', description:'', owned:0, completed:0 } ]
 
 var walks = [ {walk:'school', cost:10000, bonus:10, duration:10, enabled:1, title:'Walk to school', description:'Esa loves walking to the school.  More details....', end_text:'The walk is over.'},
               {},
@@ -57,7 +68,7 @@ $.when(deviceReadyDeferred, jqmReadyDeferred).then(init);
 function init() {
 }
 
-// on window load
+// Index Page
 $(window).bind("load", function() {
 
    var esa = $('#esa')[0];
@@ -97,6 +108,13 @@ $(window).bind("load", function() {
    max_chapter_id = Math.max.apply(null, chapters.map(function(c){return c.id;}))
 
    setPointsPerMinute();
+});
+
+// Store Page
+// Use pagebeforecreate instead of pageinit so that it fires before jquery widgets are initialized
+// See https://demos.jquerymobile.com/1.2.0/docs/pages/page-scripting.html
+$( document ).delegate("#store", "pagebeforecreate", function() {
+  populateStoreList();
 });
 
 function givePoints(gesture_point) {
@@ -145,14 +163,13 @@ function closePopup() {
   setTimeout(nextChapter, 500); // Change this.  Instead of wait 500ms, look for the existence of an element
 }
 
-
 function showPopup(id) {
 
   // Set element to position to
   if ('element' in chapters[id]) {
 
     // Note: The link needs to be dynamic or the data-position-to doesn't work.
-    
+
     // create a dynamic a selector
     $('<a>', {
       id: 'btn_positioned_' + id,
@@ -229,6 +246,43 @@ function nextChapter() {
   }
 }
 
+function populateStoreList() {
+
+  var owned = '';
+  var row_style = '';
+  var href = '';
+
+  // Clear out the list first
+  $("#items").empty();
+
+  // Load products
+  for (i = 0; i<products.length; i++ ) {
+
+    if (products[i].owned == 1) { owned = '<img src="images/buttons/owned.png" class="ui-li-icon ui-corner-none">' } else { owned = '' }
+    if (products[i].enabled == 1) {
+      row_style = '';
+      href = 'href = "#popup"';
+    } else {
+      row_style = 'color: gray;'; // just make this disabled
+      href = '';
+    }
+
+    $("#items").append('<li><a onclick="populateStoreItem(\'' + products[i].item + '\');" ' + href + ' \
+                          data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" \
+                          data-corners="true" data-shadow="true"> \
+                            <div class="ui-grid-b" style="' + row_style + '"> \
+                              <div class="ui-block-a"><img src="../_assets/img/gf.png" class="ui-li-icon ui-corner-none">' +
+                              products[i].item + '</div>' +
+                              '<div class="ui-block-b">$' + products[i].cost + '</div>' +
+                              '<div class="ui-block-c">' + owned + '</div>' +
+                            '</div>' +
+                            '</a></li>');
+
+    // Re-initialize the jquery mobile widget so it redraws
+    $("#items").trigger("create");
+  }
+}
+
 function populateStoreItem(item) {
   // Find the item in the products array
   var storeItem = $.grep(products, function(e){ return e.item == item; });
@@ -256,8 +310,12 @@ function unlock(items) {
   for (i = 0; i<items.length; i++ ) {
     if ('product' in items[i]) {
       alert('You just unlocked the ' + items[i].product + ' in the store!');
+        var product = $.grep(products, function(e){ return e.item == items[i].product; });
+        product[0].enabled = 1;
     } else if ('walk' in items[i]) {
       alert('You can now walk with Esa to the ' + items[i].walk + '!');
+    } else if ('selector' in items[i]) {
+      alert('You can now.... ' + items[i].something + '! Click here!');
     }
   }
 }
@@ -286,6 +344,8 @@ function buy(item) {
       if ('unlocks' in purchased[0]) {
         unlock(purchased[0].unlocks);
       }
+
+      populateStoreList();
     }
   }
 }

@@ -1,48 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="lib/jquery-2.1.1.min.js"></script>
-    <script src="js/app.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="m/styles_mobile.css" /> -->
-    <script>
-      if (screen && screen.width < 480) {
-        document.write('<script src="lib/jquery.mobile-1.4.5.min.js"><\/script>');
-      }
-    </script>
-
+    <title>Store</title>
   </head>
 
   <body>
 
-    <div data-role="page" data-theme="c">
-      <div data-role="header">
+    <div id="store" data-role="page" data-theme="c">
+      <div data-role="header" data-position="fixed">
         <h1>Shop for items for Esa!</h1>
       </div>
 
-      <div id="store">
+      <div id="item_frame">
 
-        <div id="points" class="ui-grid-b">
-          <div class="ui-block-a">
-            <a onclick="populateStoreItem('collar');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" ><span class="ui-btn-inner ui-btn-corner-all"> <span>Collar</span></span></a>
-          </div>
-          <div class="ui-block-b">
-            <a onclick="populateStoreItem('comb');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>Comb</span></span></a>
-          </div>
-          <div class="ui-block-c">
-            <a onclick="populateStoreItem('brush');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span >Brush.</span></span></a>
-          </div>
-          <div class="ui-block-a">
-            <a onclick="populateStoreItem('tummy');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>Ball</span></span></a>
-          </div>
-          <div class="ui-block-b">
-            <a onclick="populateStoreItem('mint');" href="#popup" data-role="button" data-rel="popup" data-transition="slidefade" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span"><span class="ui-btn-inner ui-btn-corner-all"> <span>Leash</span></span></a>
-          </div>
-          <div class="ui-block-c">
-          </div>
-        </div>
+        <ul id="items" data-role="listview" data-inset="true">
+          <!-- Populate store items here with javascript -->
+        </ul>
 
         <div data-role="popup" id="popup" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-position-to="window">
           <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>

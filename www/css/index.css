@@ -100,9 +100,20 @@ body {
 /* move all store stuff to another css*/
 #store {
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
   font-size: 16px;
+}
+
+#item_frame {
+  margin: auto;
+  width: 80%;
+}
+
+#items {}
+
+#items .ui-block-c {
+  text-align: right;
 }
 
 #popup {
